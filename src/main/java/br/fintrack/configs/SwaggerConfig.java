@@ -16,7 +16,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.OAS_30)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.fintrack.controllers")) // Specify the package where your controllers are located
+                .apis(RequestHandlerSelectors.basePackage("br.fintrack.controllers"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false)
