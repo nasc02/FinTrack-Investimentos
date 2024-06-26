@@ -1,5 +1,6 @@
 package br.fintrack.configs;
 
+import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,15 +15,15 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 
 /**
  * Configurações para acessar o AWS DynamoDB
- * Para rodar, antes sete a seguinte variável de ambiente: -Dspring.config.location=C:/Users/jhcru/sdm/
- * Neste diretório, criar um arquivo application.properties contendo as seguitnes variáveis:
+ * Para rodar, antes sete a seguinte variável de ambiente: -Dspring.config.location=file:///C:/Users/henri/workspace/Java/FinTrackInvestment.configs/applications.properties
+ * No diretório criado a cima crie o arquivo application.properties contendo as seguitnes variáveis:
  * amazon.aws.accesskey=
  * amazon.aws.secretkey=
- * @author jhcru
+ * @author jhcru,nasc02
  *
- * Ou remova a notaçao de value e passa os valores na mão mesmo, e depois apaga
  */
 @Configuration
+@EnableDynamoDBRepositories(basePackages = "br.fintrack.repositories")
 public class DynamoDBConfig {
 
     @Value("${amazon.aws.accesskey}")

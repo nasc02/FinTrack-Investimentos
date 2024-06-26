@@ -2,7 +2,6 @@ package br.fintrack.controllers;
 
 import br.fintrack.models.User;
 import br.fintrack.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @PostMapping
     public User createUser(@RequestBody User user) {
@@ -20,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable Short id) {
+    public User getUserById(@PathVariable String id) {
         return userRepository.findById(id).orElse(null);
     }
 
@@ -30,7 +32,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable Short id, @RequestBody User user) {
+    public User updateUser(@PathVariable String id, @RequestBody User user) {
         if (userRepository.existsById(id)) {
             user.setId(id);
             return userRepository.save(user);
@@ -39,7 +41,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Short id) {
+    public void deleteUser(@PathVariable String id) {
         userRepository.deleteById(id);
     }
 }
