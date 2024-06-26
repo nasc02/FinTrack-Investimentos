@@ -1,10 +1,6 @@
 
 # FinTrack-Investimentos
 
-Sure, here's a complete README documentation for your project:
-FinTrack API
-Overview
-
 FinTrack API is a RESTful web service built with Spring Boot for managing user accounts and investments using DynamoDB as the data store. It provides endpoints for creating, reading, updating, and deleting users and investments.
 Features
 
