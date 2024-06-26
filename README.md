@@ -71,21 +71,21 @@ Investments
     DELETE /api/investments/{id}
         Deletes an investment by ID.
 
-Running the Application
+# Running the Application
 
 Configuration
 
 
-Configure AWS credentials and region in a application.properties file in the following way:
-
-amazon.aws.accesskey=your_access_key
-amazon.aws.secretkey=your_secret_key
-
-after creating this file you need to set the following env variable: -Dspring.config.location=file:///C:/Users/You/yourLocationToTheFile/applications.properties
-
-make sure to have these tables in the AWS dynamoDB
-Investiment
-User
+    Configure AWS credentials and region in a application.properties file in the following way:
+    
+    amazon.aws.accesskey=your_access_key
+    amazon.aws.secretkey=your_secret_key
+    
+    after creating this file you need to set the following env variable: -Dspring.config.location=file:///C:/Users/You/yourLocationToTheFile/applications.properties
+    
+    make sure to have these tables in the AWS dynamoDB
+    Investiment
+    User
 
 
 Terminal
@@ -96,9 +96,9 @@ Terminal
 
 Testing
 
-Unit tests are implemented using JUnit. To run the tests:
-
-  mvn test
+    Unit tests are implemented using JUnit. To run the tests:
+    
+      mvn test
 
 
 
