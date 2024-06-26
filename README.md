@@ -30,19 +30,19 @@ Project Structure
 
 The project is structured as follows:
 
-
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── br.fintrack.configs/           # Configs for Dynamo db connection
-│   │   │   ├── br.fintrack.controllers/       # Controllers for REST API endpoints
-│   │   │   ├── br.fintrack.repositories/      # Spring Data repositories for data access
-│   │   │   ├── br.fintrack.models/            # Entity classes representing data models
-│   └── test/
-│       └── java/
-│           └── br.fintrack.tests/             # Unit tests
-├── pom.xml                                   # Maven build configuration
-└── README.md                                 # Project documentation (you are here rs :) )
+    
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/
+    │   │   │   ├── br.fintrack.configs/           # Configs for Dynamo db connection
+    │   │   │   ├── br.fintrack.controllers/       # Controllers for REST API endpoints
+    │   │   │   ├── br.fintrack.repositories/      # Spring Data repositories for data access
+    │   │   │   ├── br.fintrack.models/            # Entity classes representing data models
+    │   └── test/
+    │       └── java/
+    │           └── br.fintrack.tests/             # Unit tests
+    ├── pom.xml                                   # Maven build configuration
+    └── README.md                                 # Project documentation (you are here rs :) )
 
 API Endpoints
 Users
